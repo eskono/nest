@@ -8,7 +8,7 @@ Add <script src="system/js/nest.js"></script> to your page.
 Move all to the PHP server and it's all!!!.
 Than you can open admin page in URL.
 Password 0;
-And write text, html in field just choose class, id oa tag of element which you want update.
+And write text, html in field just choose class, id or tag of element which you want update.
 
 
 
