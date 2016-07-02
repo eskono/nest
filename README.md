@@ -10,11 +10,11 @@ Nest - admin panel for light web page, that can add, update text with html and O
 
     <script src="system/js/nest.js"></script> 
    
-4.Move all to the PHP server and it's all!!!
+4.Move all to the PHP server and it's all !!!
 
 Than you can open admin page in URL.
 
-Password 0;
+Password "0".
 
 And write text, html in field just choose class, id or tag of element which you want update.
 
