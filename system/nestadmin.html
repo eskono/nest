@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nest Admin</title>
+    <link href="bulma.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.js"></script>
+    <script src="js/orna.js"></script>
+    <script src="js/admin.js"></script>
+   
+</head>
+<body style="padding:20px"><br>
+<div class="columns">
+     <div class="column">
+   
+  </div>
+ <h1 class="title is-1 textincenter">Nest</h1>
+   
+    <div class="column">
+   
+    </div></div><div class="columns">
+     <div class="column">
+   
+  </div>
+ <h2 class="subtitle is-2 textincenter">Control panel</h2>
+   
+    <div class="column">
+   
+    </div></div>
+    <div class="columns">
+     <div class="column">
+   
+  </div>
+  <div class="column">
+ 
+  </div> <div class="column">
+ 
+  </div>
+   <form class="column">
+      <p class="control">
+   <span class="select">
+   <select id="classSelect">
+       
+       
+       
+   </select>
+    </span>
+    <a class="button is-danger" onclick="del()">
+  <span>Delete</span>
+  <span class="icon">
+    <i class="fa fa-times"></i>
+  </span>
+</a>
+    </p>
+     
+      <label class="label">.class, tagname or #id</label>
+       
+       <p class="control">
+       <input type="text" id="className" class="input" placeholder="Select element by class, name, id">
+       </p>
+      
+       <label class="label">Text<br>(You can use HTML with OrnaJS classes)</label>
+       
+       <p class="control">
+       <textarea id="classText" class="textarea" >
+           
+       </textarea>
+       </p>
+       <p class="control">
+       <a class="button is-success" onclick="save()">
+  <span class="icon">
+    <i class="fa fa-check"></i>
+  </span>
+  <span>Save</span>
+</a>
+   
+       <a class="button" href="https://github.com/nestpanel/nest">
+  <span class="icon">
+    <i class="fa fa-github"></i>
+  </span>
+  <span>GitHub</span>
+</a>
+      <a class="button"  href="http://ornaorg.github.io">
+  <span class="icon">
+    <i class="fa fa-code"></i>
+  </span>
+  <span>OrnaJS</span>
+</a>
+       </p>
+   </form>
+   <div class="column">
+  
+  </div>
+   <div class="column">
+ 
+  </div>
+   <div class="column">
+ 
+  </div>
+    </div>
+    <div class="notification is-info">
+  
+  Nest Admin - it's  integrated panel for your site. Nest put text and html into your web page. Good for landing page.<br> For setting Nest you only need to take web page and put into root folder, near "admin.html" after that add script "nest.js" to it. When script added it's all, then write text and write <i>.class, #id or name</i> of element in which you want add a text.
+<br>
+ Text fields support HTML and OrnaJS classes.
+  
+</div>
+
+</body>
+
+</html>

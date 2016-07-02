@@ -2,18 +2,9 @@
 var dataPack;
 function draw(){
     try{
-$.getJSON( "system/data.json", function( data ) {
+$.getJSON( "data.json", function( data ) {
     dataPack = data;
-    try{
-  $.each( data, function( key, val ) {
-    $("."+key).html(val);
-      createatom();
-  });
-    }
-    catch(e)
-        {
-            console.log(e);
-        }
+   
     put();
     
 });
@@ -109,7 +100,7 @@ function send(){
     
     $.ajax({
        
-        url: "system/save.php",
+        url: "save.php",
         type: "post",
         data: ({text : JSON.stringify(dataPack)}),
         dataType: "json"
