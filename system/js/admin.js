@@ -2,7 +2,7 @@
 var dataPack;
 function draw(){
     try{
-$.getJSON( "data.json", function( data ) {
+$.getJSON( "system/data.json", function( data ) {
     dataPack = data;
    
     put();
@@ -100,7 +100,7 @@ function send(){
     
     $.ajax({
        
-        url: "save.php",
+        url: "system/save.php",
         type: "post",
         data: ({text : JSON.stringify(dataPack)}),
         dataType: "json"
