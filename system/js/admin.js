@@ -5,6 +5,8 @@ function draw() {
         $.getJSON("system/data.json", function(data) {
             dataPack = data;
             put();
+        }).always(function(){
+            put();
         });
     } catch (e) {}
 }
@@ -14,6 +16,7 @@ function put() {
     $("#classSelect").empty();
     $("#classSelect").append('<option>None</option>');
     $.each(dataPack, function(key, val) {
+       
         $("#classSelect").append('<option>' + key + '</option>');
     });
 };
@@ -29,6 +32,9 @@ $(document).ready(function() {
 });
 
 function save() {
+    var what = $('#className').val().replace(/[\s]+/, "");
+     if( what !== "" && what !== undefined ){
+         
     try {
         var item = dataPack[$('#className').val()];
     } catch (e) {}
@@ -56,6 +62,14 @@ function save() {
         }
         send();
         alert('Add new Class with Text!');
+    }
+     }
+    else{
+   
+            alert('Empty Field!');
+         
+            
+        
     }
 }
 

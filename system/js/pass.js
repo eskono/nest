@@ -24,6 +24,7 @@ function checkPass() {
     if ($('#pass').val() === pass.toString()) {
         temp = Handlebars.compile(source2);
         document.body.innerHTML = temp('');
+        draw();
     } else {
         alert('False');
     }
