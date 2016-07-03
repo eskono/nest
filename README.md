@@ -16,7 +16,7 @@ Than you can open admin page in URL.
 
 Password "0".
 
-And write text, html in field just choose class, id or tag of element which you want update.
+Write text with html in field just choose class, id or tag of element which you want update.
 
 
 
