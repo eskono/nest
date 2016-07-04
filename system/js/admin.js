@@ -21,15 +21,23 @@ function put() {
     });
 };
 $(document).ready(function() {
-    $("#classSelect").on('change', function(event) {
-        var className = event.target.value;
-        $('#className').val(className);
-        $('#classText').val(dataPack[className]);
-    });
-    checkit("input", /[.]+/, "red", "blue", Infinity);
-    checkit("textarea", /[.]+/, "red", "blue", Infinity);
-    createatom();
+    $("#classSelect").on('change', setval);
+
+        checkit("input", /[.]+/, "red", "blue", Infinity);
+       checkit("textarea", /[.]+/, "red", "blue", Infinity);
+       createatom();
 });
+
+function setval(event) {
+        var className = event.target.value;
+         className = $("#classSelect").val();
+         $('#className').val(className);
+       
+        $('#classText').val(dataPack[className]);
+       
+     $("#classSelect").on('change', setval);
+
+    }
 
 function save() {
     var what = $('#className').val().replace(/[\s]+/, "");

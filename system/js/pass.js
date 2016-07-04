@@ -25,6 +25,8 @@ function checkPass() {
         temp = Handlebars.compile(source2);
         document.body.innerHTML = temp('');
         draw();
+        $("#classSelect").on('change', setval);
+
     } else {
         alert('False');
     }
