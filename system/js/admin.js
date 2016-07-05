@@ -53,7 +53,7 @@ function save() {
     } else {
         var newText = $('#classText').val();
         try {
-            Object.defineProperty(dataPack, $('#className').val(), {
+            Object.defineProperty(dataPack, $('#className').val().replace(/[\s]+/, ""), {
                 enumerable: true,
                 configurable: true,
                 writable: true,
@@ -61,7 +61,7 @@ function save() {
             });
         } catch (e) {
             dataPack = {};
-            Object.defineProperty(dataPack, $('#className').val(), {
+            Object.defineProperty(dataPack, $('#className').val().replace(/[\s]+/, ""), {
                 enumerable: true,
                 configurable: true,
                 writable: true,
