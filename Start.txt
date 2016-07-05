@@ -1,0 +1,30 @@
+https://nestpanel.github.io
+
+Start with Nest
+
+1.Download NEST.
+
+2.Drop your index and project files to the NEST root folder. Near admin.html.
+
+3.Include (system/js/nest.js) script to all page, that you want to control.
+
+4.Load all to PHP server (WAMP, XAMPP, OpenServer).
+
+5.Run server and open /admin.html in URL input.
+
+6.Enter default password "0". 
+
+You can change password in "system/info.txt".
+Hide info.txt file with .htaccess. Just add .htaccess file to folder.
+
+.htaccess
+--------------------------------
+Options -Indexes
+<Files info.txt>
+order deny,allow 
+deny from all 
+allow from  !WRITE YOUR IP HERE!
+</Files>
+--------------------------------
+
+7.Write class, id or tag of element and text for it
