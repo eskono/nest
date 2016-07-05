@@ -6,7 +6,9 @@ $(document).ready(function() {
     source2 = $("#adminTemplate").html();
     temp = Handlebars.compile(source1);
     document.getElementById('main').innerHTML = temp('');
-});
+      checkit("#pass", /[a-zA-Zа-яА-Я]+/, "red", "blue", 20);
+    
+    });
 var pass;
 try {
     $.getJSON("system/info.txt", function(data) {
@@ -21,6 +23,7 @@ try {
 }
 
 function checkPass() {
+  
     if ($('#pass').val() === pass.toString()) {
         temp = Handlebars.compile(source2);
         document.body.innerHTML = temp('');

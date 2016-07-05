@@ -8,7 +8,7 @@ function draw() {
         }).always(function(){
             put();
         });
-    } catch (e) {}
+      } catch (e) {}
 }
 draw();
 
@@ -88,6 +88,17 @@ function send() {
         data: ({
             text: JSON.stringify(dataPack)
         }),
+        beforeSend : function(){
+            
+     $('body').append('<div id="frame" class="overflow_hidden  b_1px_solid_black br_100% bgc_rgb(255,255,255) w_140px h_140px absolute clean center"><img id="spin" src="system/spinner.gif"  class="w_100px absolute clean center"></div>');
+     createatom();
+    setInterval(function(){
+         $('#spin').remove();
+         $('#frame').remove();
+    }, 2400);
+            
+        },
+       
         dataType: "json"
     }).fail(function() {
         //alert( "error" );
