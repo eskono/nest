@@ -1198,7 +1198,7 @@ function createatom(id) {
                 if ($(this).val().search(reg) != -1) {
                     $(this).css('border-color', color1);
                     $(this).val('');
-                    $(this).attr('placeholder', 'Only numbers!');
+                    $(this).attr('placeholder', 'Invalid value!');
                 } else if ($(this).val().length == 0) {
                     $(this).css('border-color', color1);
                     $(this).val('');
@@ -1207,6 +1207,7 @@ function createatom(id) {
                     if ($(this).val().length == length) {
                         $(this).css('border-color', color2);
                     }
+                           $(this).css('border-color', color2);
                 }
             });
         }
