@@ -1,0 +1,20 @@
+{
+    "name": "nest/nest",
+    "type": "library",
+    "description": "Admin panel for web page",
+    "keywords": ["admin","dashboard"],
+    "homepage": "https://nestpanel.github.io",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dima Popov",
+            "email": "dima1popov@ukr.net",
+            "homepage": "https://github.com/DimaPopov",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    }
+    
+}
