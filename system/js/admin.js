@@ -32,18 +32,20 @@ function setval(event) {
     var className = event.target.value;
     className = $("#classSelect").val();
     $('#className').val(className);
-    $('#classText').val(dataPack[className]);
+      CKEDITOR.instances.classText.setData(dataPack[className]);
     $("#classSelect").on('change', setval);
 }
 
 function save() {
     var what = $('#className').val().replace(/[\s]+/, "");
+    
     if (what !== "" && what !== undefined) {
         try {
             var item = dataPack[$('#className').val()];
         } catch (e) {}
         if (item) {
-            dataPack[$('#className').val()] = $('#classText').val();
+            alert(CKEDITOR.instances.classText.getData());
+            dataPack[$('#className').val()] = CKEDITOR.instances.classText.getData();
             send();
             //alert('Text Update!');
             $("#dialog2").dialog({
@@ -56,7 +58,7 @@ function save() {
                 }]
             });
         } else {
-            var newText = $('#classText').val();
+            var newText = CKEDITOR.instances.classText.getData();
             try {
                 Object.defineProperty(dataPack, $('#className').val().replace(/[\s]+/, ""), {
                     enumerable: true,
@@ -128,5 +130,5 @@ function del() {
     delete dataPack[$("#classSelect").val()];
     send();
     $('#className').val('');
-    $('#classText').val('');
+    CKEDITOR.instances.classText.setData('');
 }
