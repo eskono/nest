@@ -13,17 +13,30 @@ var pass;
 try {
     $.getJSON("system/info.txt", function(data) {
         try {
+            if(data!==undefined){
             pass = data;
+            }
+            else{
+            alert('Load error or IP access denied!');
+                }
         } catch (e) {
             console.log(e);
+             alert('Load error or IP access denied!');
         }
-    });
+    }).fail(
+    
+        function() {
+   alert('Load error or IP access denied!');
+  }
+    
+    );
 } catch (e) {
     console.log(e);
+   
 }
 
 function checkPass() {
-  
+  if(pass!==undefined){
     if ($('#pass').val() === pass.toString()) {
         temp = Handlebars.compile(source2);
         document.body.innerHTML = temp('');
@@ -50,4 +63,5 @@ toolbar : [
            } else {
         alert('False');
     }
+}
 }
