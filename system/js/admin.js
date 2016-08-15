@@ -1,4 +1,4 @@
-var dataPack;
+var dataPack = {};
 
 function draw() {
     try {
@@ -59,22 +59,12 @@ function save() {
             });
         } else {
             var newText = CKEDITOR.instances.classText.getData();
-            try {
-                Object.defineProperty(dataPack, $('#className').val().replace(/[\s]+/, ""), {
-                    enumerable: true,
-                    configurable: true,
-                    writable: true,
-                    value: newText
-                });
-            } catch (e) {
-                dataPack = {};
-                Object.defineProperty(dataPack, $('#className').val().replace(/[\s]+/, ""), {
-                    enumerable: true,
-                    configurable: true,
-                    writable: true,
-                    value: newText
-                });
-            }
+            Object.defineProperty(dataPack, $('#className').val().replace(/[\s]+/, ""), {
+                enumerable: true,
+                configurable: true,
+                writable: true,
+                value: newText
+            });
             send();
             //alert('Add new Class with Text!');
             $("#dialog1").dialog({
